@@ -40,7 +40,10 @@ public class Petstore {
 	@OneToMany(mappedBy = "petstore")
 	private Set<Animal> animals;
 
-	public Petstore() {
+	public Petstore(String name, String managerName, Address address) {
+		this.name = name;
+		this.managerName = managerName;
+		this.address = address;
 	}
 
 	/**
@@ -83,6 +86,48 @@ public class Petstore {
 	 */
 	public void setManagerName(String managerName) {
 		this.managerName = managerName;
+	}
+
+	/**
+	 * @return the products
+	 */
+	public Set<Product> getProducts() {
+		return products;
+	}
+
+	/**
+	 * @param products the products to set
+	 */
+	public void setProducts(Set<Product> products) {
+		this.products = products;
+	}
+
+	/**
+	 * @return the address
+	 */
+	public Address getAddress() {
+		return address;
+	}
+
+	/**
+	 * @param address the address to set
+	 */
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	/**
+	 * @return the animals
+	 */
+	public Set<Animal> getAnimals() {
+		return animals;
+	}
+
+	/**
+	 * @param animals the animals to set
+	 */
+	public void setAnimals(Set<Animal> animals) {
+		this.animals = animals;
 	}
 
 }

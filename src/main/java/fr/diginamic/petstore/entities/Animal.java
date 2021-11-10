@@ -32,9 +32,12 @@ public abstract class Animal {
 	@JoinColumn(name = "petstore_id", referencedColumnName = "id")
 	private Petstore petstore;
 
-	public Animal() {
+	public Animal(LocalDate birth, String color, Petstore petstore) {
+		this.birth = birth;
+		this.color = color;
+		this.petstore = petstore;
 	}
-
+	
 	/**
 	 * @return the id
 	 */

@@ -31,7 +31,11 @@ public class Address {
 	@OneToOne(mappedBy = "address")
 	private Petstore petstore;
 
-	public Address() {
+	public Address(String number, String street, String zipCode, String city) {
+		this.number = number;
+		this.street = street;
+		this.zipCode = zipCode;
+		this.city = city;
 	}
 
 	/**

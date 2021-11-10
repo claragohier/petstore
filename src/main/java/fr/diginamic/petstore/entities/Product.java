@@ -27,17 +27,21 @@ public class Product {
 
 	@Column(name = "label", length = 50, nullable = false)
 	private String label;
-	
+
 	@Enumerated(EnumType.ORDINAL)
 	private ProdType type;
-	
+
 	@Column(name = "price", nullable = false)
 	private double price;
-	
+
 	@ManyToMany
 	Set<Petstore> petstore;
-	
-	public Product() {	
+
+	public Product(String code, String label, ProdType type, double price) {
+		this.code = code;
+		this.label = label;
+		this.type = type;
+		this.price = price;
 	}
 
 	/**
@@ -109,5 +113,5 @@ public class Product {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	
+
 }
